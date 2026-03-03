@@ -1,4 +1,7 @@
-import 'dotenv/config'
+import path from 'path'
+import dotenv from 'dotenv'
+dotenv.config({ path: path.resolve(__dirname, '../../.env') })
+
 import { v2 as cloudinary } from 'cloudinary'
 import { Readable } from 'stream'
 
@@ -8,6 +11,12 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
   secure: true,
+})
+
+console.log('[storage] Cloudinary configured:', {
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: !!process.env.CLOUDINARY_API_KEY,
+  api_secret: !!process.env.CLOUDINARY_API_SECRET,
 })
 
 export type FileType = 'pdf' | 'docx' | 'doc' | 'txt' | 'image'
