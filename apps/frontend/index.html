@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DocuFree — Free AI-powered document editor. Edit PDFs, DOCX files, and more without any subscriptions." />
+    <title>DocuFree — Edit Documents Free</title>
+    <!-- GitHub Pages SPA routing restore -->
+    <script>
+      (function() {
+        var p = window.location.search.match(/[?&]p=([^&]*)/);
+        if (p) {
+          window.history.replaceState(null, null,
+            window.location.pathname.split('/').slice(0, -1).join('/') + '/' +
+            p[1].replace(/~and~/g, '&') +
+            (window.location.search.match(/[?&]q=([^&]*)/) || ['',''])[1].replace(/~and~/g, '&') +
+            window.location.hash
+          );
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
