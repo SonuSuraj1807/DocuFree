@@ -13,12 +13,6 @@ cloudinary.config({
   secure: true,
 })
 
-console.log('[storage] Cloudinary configured:', {
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: !!process.env.CLOUDINARY_API_KEY,
-  api_secret: !!process.env.CLOUDINARY_API_SECRET,
-})
-
 export type FileType = 'pdf' | 'docx' | 'doc' | 'txt' | 'image'
 
 function detectFileType(mimeType: string): FileType {
